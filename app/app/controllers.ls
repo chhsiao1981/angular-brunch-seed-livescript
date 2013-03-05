@@ -1,10 +1,10 @@
 mod = {}
 
-mod.AppCtrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resource, $rootScope) ->
+mod.AppCtrl = <[$scope $location $resource $rootScope version]> ++ (s, $location, $resource, $rootScope, version) ->
+  s <<< {$location, version}
 
   # Uses the url to determine if the selected
   # menu item should have the class active.
-  s <<< {$location}
   s.$watch '$location.path()' (activeNavId or '/') ->
     s <<< {activeNavId}
 
@@ -17,15 +17,6 @@ mod.AppCtrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resou
   #   getClass('/orders') # returns ''
   #
   s.getClass = (id) ->
-    if s.activeNavId.substring 0 id.length is id
-      'active'
-    else
-      ''
-
-mod.MyCtrl1 = <[$scope]> ++ (s) ->
-  s.Title = "MyCtrl1"
-
-mod.MyCtrl2 = <[$scope]> ++ (s) ->
-  s.Title = "MyCtrl2"
+    if (s.activeNavId.substring 0, id.length) is id then 'active' else ''
 
 angular.module 'app.controllers' [] .controller mod

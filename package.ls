@@ -16,7 +16,7 @@ scripts:
   test: 'testacular test/testacular.config.js'
 dependencies: {}
 devDependencies:
-  testacular: '>= 0.0.16'
+  testacular: '>= 0.6.0'
   LiveScript: '>= 1.1.1'
   brunch: '1.5.x'
   'javascript-brunch': '1.5.x'
