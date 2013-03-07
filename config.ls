@@ -15,6 +15,7 @@ exports.config =
     javascripts:
       joinTo:
         'js/app.js': /^app((?!test).)*$/
+        'js/test.js': /^app.*test.*$/
         'js/vendor.js': /^vendor/
       order:
         before:
