@@ -1,0 +1,6 @@
+mod = {}
+
+mod.version = 
+  -> "0.1"
+
+angular.module '{{project}}.services' <[]> .factory mod

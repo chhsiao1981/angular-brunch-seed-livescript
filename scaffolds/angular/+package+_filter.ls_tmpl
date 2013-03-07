@@ -1,0 +1,8 @@
+# Filters
+
+mod = {}
+mod.{{project}}Filter = <[version]> ++ (version) ->
+  (text) ->
+    String(text)replace /\%VERSION\%/mg version
+
+[angular.module '{{project}}.filters' <[]> .filter key, val for key, val of mod]
