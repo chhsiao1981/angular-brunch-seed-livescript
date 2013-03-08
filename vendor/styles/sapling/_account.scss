@@ -2,6 +2,6 @@
 // To prevent this hide the icons at those widths
 @media (min-width: 768px) and (max-width: 980px) {
    #account-nav [class^="icon-"] {
-       display: none;
+     display: none;
    }
 }

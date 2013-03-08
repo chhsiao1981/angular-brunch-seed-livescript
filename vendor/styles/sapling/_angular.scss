@@ -1,11 +1,11 @@
 input.ng-dirty.ng-valid {
   /*.formFieldState(@successText, @successText, @successBackground);*/
-  border-color: @successText;
+  border-color: $successText;
 }
 
 input.ng-dirty.ng-invalid {
   /*.formFieldState(@errorText, @errorText, @errorBackground);*/
-  border-color: @errorText;
+  border-color: $errorText;
 }
 
 input.ng-pristine {

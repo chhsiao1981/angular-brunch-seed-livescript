@@ -1,7 +1,7 @@
 
 // Sticky Footer
 
-@footerHeight: 88px;
+$footerHeight: 88px;
 
 html, body {
   height: 100%;
@@ -11,11 +11,11 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -@footerHeight;
+  margin: 0 auto -$footerHeight;
 }
 
 .push {
-    height: @footerHeight;
+    height: $footerHeight;
 }
 
 .wrapper > .container {
