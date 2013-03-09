@@ -9,4 +9,4 @@ mod.AppCtrl = <[$scope $location $resource $rootScope version]> ++ (s, $location
   s.getClass = (id) ->
     if (s.activeNavId.substring 0, id.length) is id then 'active' else ''
 
-angular.module 'app.controllers' <[]> .controller mod
+angular.module 'app.controllers' <[app.services]> .controller mod

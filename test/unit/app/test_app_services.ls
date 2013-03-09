@@ -1,10 +1,7 @@
-describe "app", (not-it) ->
+describe "app.services", (not-it) ->
   beforeEach ->
-    browser! .navigateTo "/"
+    module "app.services"
   
-  it "", ->
-    expect("") .toBe ""
-
-  afterEach ->
-    
-    
+  describe "version", (not-it) ->
+    it "should return current version", inject (version) ->
+      expect(version).toEqual "0.1"

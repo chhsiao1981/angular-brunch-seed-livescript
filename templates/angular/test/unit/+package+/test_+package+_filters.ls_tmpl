@@ -1,6 +1,6 @@
-describe "app.filters", (not-it) ->
+describe "{{project}}.filters", (not-it) ->
   beforeEach ->
-    module "app.filters"
+    module "{{project}}.filters"
   
   describe "interpolate", (not-it)->
     beforeEach ->
