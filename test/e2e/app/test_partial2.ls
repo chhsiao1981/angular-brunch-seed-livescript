@@ -5,6 +5,6 @@ describe "partial2", (not-it) ->
   afterEach ->
   
   it "", ->
-    expect("") .toBe ""
+    expect("") .toBe undefined
     
     

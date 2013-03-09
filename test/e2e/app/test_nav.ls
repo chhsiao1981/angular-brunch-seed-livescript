@@ -3,8 +3,8 @@ describe "nav", (not-it) ->
     browser! .navigateTo "/"
 
   afterEach ->
-  
-  it "", ->
-    expect("") .toBe ""
-    
+
+  it "", -> 
+    expect("") .toBe undefined
+
     
