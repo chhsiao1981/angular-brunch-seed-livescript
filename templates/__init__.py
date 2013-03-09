@@ -5,7 +5,7 @@ def underscore_to_camelcase(var):
     return ''.join([word.capitalize() for word in var.split('_')])
 
 
-class Connect4PyramidTemplate(Template):
+class PyramidTemplate(Template):
     """
      A class that can be used as a base class for Pyramid scaffolding
      templates.
@@ -43,14 +43,14 @@ class Connect4PyramidTemplate(Template):
     def out(self, msg): # pragma: no cover (replaceable testing hook)
         print(msg)
 
-class AngularProjectTemplate(Connect4PyramidTemplate):
+class AngularProjectTemplate(PyramidTemplate):
     _template_dir = 'angular'
     summary = 'angular project'
 
-class JadeProjectTemplate(Connect4PyramidTemplate):
+class JadeProjectTemplate(PyramidTemplate):
     _template_dir = 'jade'
     summary = 'jade project'
 
-class TestProjectTemplate(Connect4PyramidTemplate):
+class TestProjectTemplate(PyramidTemplate):
     _template_dir = 'test'
     summary = 'angular project'
