@@ -1,0 +1,8 @@
+50a51,54
+>     parser.add_option('-d', '--dir',
+>                       dest='output_dir',
+>                       action='store',
+>                       help='customized output dir')
+84a89,90
+>         if options.output_dir != None:
+>             output_dir = os.path.abspath(os.getcwd()) + "/" + options.output_dir

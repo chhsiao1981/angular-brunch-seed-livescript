@@ -1,9 +1,13 @@
 from pyramid.scaffolds.template import Template # API
 import logging #logging
+import os
 
-def underscore_to_camelcase(var):
+def underscore_to_camelcase_uppercase(var):
     return ''.join([word.capitalize() for word in var.split('_')])
 
+def underscore_to_camelcase(var):
+    var_camelcase_uppercase = underscore_to_camelcase_uppercase(var)
+    return var_camelcase_uppercase[:1].lower() + var_camelcase_uppercase[1:] if var_camelcase_uppercase else ''
 
 class PyramidTemplate(Template):
     """
@@ -27,10 +31,11 @@ class PyramidTemplate(Template):
             package_logger = 'app'
         vars['package_logger'] = package_logger
 
-        logging.warn('command: ' + repr(command))
-        logging.warn('output_dir: ' + repr(output_dir))
-        logging.warn('vars: ' + repr(vars))
+        logging.warning('command: ' + repr(command))
+        logging.warning('output_dir: ' + repr(output_dir))
+        logging.warning('vars: ' + repr(vars))
         vars['project_camelcase'] = underscore_to_camelcase(vars['project'])
+        vars['project_camelcase_uppercase'] = underscore_to_camelcase_uppercase(vars['project'])
         return Template.pre(self, command, output_dir, vars)
 
     def post(self, command, output_dir, vars): # pragma: no cover
@@ -51,6 +56,6 @@ class JadeProjectTemplate(PyramidTemplate):
     _template_dir = 'jade'
     summary = 'jade project'
 
-class TestProjectTemplate(PyramidTemplate):
-    _template_dir = 'test'
-    summary = 'angular project'
+class JadeTemplateProjectTemplate(PyramidTemplate):
+    _template_dir = 'jade_template'
+    summary = 'jade_template project'

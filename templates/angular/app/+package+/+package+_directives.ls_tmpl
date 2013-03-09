@@ -1,7 +1,8 @@
 mod = {}
 
-mod.{{project_camelcase}}Directive = <[$service]> ++ (s) ->
+mod.{{project_camelcase}}Directive = <[]> ++ () ->
   (scope, elem, attrs) ->
+
     
 
 # register the module with Angular

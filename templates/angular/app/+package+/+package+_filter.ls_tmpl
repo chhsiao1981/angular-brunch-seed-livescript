@@ -1,7 +1,7 @@
 # Filters
 
 mod = {}
-mod.{{project}}Filter = <[version]> ++ (version) ->
+mod.{{project_camelcase}}Filter = <[version]> ++ (version) ->
   (text) ->
     String(text)replace /\%VERSION\%/mg version
 

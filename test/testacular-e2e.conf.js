@@ -3,8 +3,7 @@ basePath = '../';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  'app/test_e2e/test_*.ls',
-  'app/partials/**/test_e2e/test_*.ls'
+  'test/e2e/**/test_*.ls',
 ];
 
 // list of files to exclude

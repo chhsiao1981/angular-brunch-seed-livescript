@@ -8,7 +8,7 @@ files = [
   'vendor/scripts/angular/angular-*.js',
   '_public/js/app.js',
   'test/vendor/angular/angular-mocks.js',
-  'app/**/test_unit/test_*.ls'
+  'test/unit/**/test_*.ls'
 ];
 
 // list of files to exclude
