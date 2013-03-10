@@ -1,7 +1,7 @@
 # Filters
 
 mod = {}
-mod.{{project_camelcase}}Filter = <[]> ++ () ->
+mod.{{project_camelcase}}Filter = <[]> ++ ->
   (params) ->
 
 the_filters = angular.module '{{project}}.filters' <[{{project}}.services]>
