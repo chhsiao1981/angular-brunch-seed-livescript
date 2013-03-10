@@ -28,3 +28,4 @@ devDependencies:
   'auto-reload-brunch': '1.5.x'
   'uglify-js-brunch': '1.3.x'
   'clean-css-brunch': '1.5.x'
+  'express': '>= 3.1.0'

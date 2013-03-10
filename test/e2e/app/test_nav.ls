@@ -5,6 +5,6 @@ describe "nav", (not-it) ->
   afterEach ->
 
   it "", -> 
-    expect("") .toBe undefined
+    expect("") .toBe void
 
     
