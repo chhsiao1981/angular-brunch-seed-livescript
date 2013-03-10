@@ -1,11 +1,5 @@
 #!/bin/bash
 
-LIB_PYRAMID="lib/python3.3/site-packages/pyramid-1.4-py3.3.egg/pyramid"
-if [ ! -d "${LIB_PYRAMID}" ]
-then
-  LIB_PYRAMID="lib/python3.3/site-packages/pyramid"
-fi
-  
 rm -rf node_modules
 npm install
 
@@ -33,9 +27,16 @@ then
   exit 0
 fi
 
+#LIB_PYRAMID
+LIB_PYRAMID="${VIRTUAL_ENV}/lib/python3.3/site-packages/pyramid-1.4-py3.3.egg/pyramid"
+if [ ! -d "${LIB_PYRAMID}" ]
+then
+  LIB_PYRAMID="${VIRTUAL_ENV}/lib/python3.3/site-packages/pyramid"
+fi
+  
 #pcreate.py
 echo "[INFO] to pcreate.py"
-PCREATE_PY="${VIRTUAL_ENV}/${LIB_PYRAMID}/scripts/pcreate.py"
+PCREATE_PY="${LIB_PYRAMID}/scripts/pcreate.py"
 is_pcreate_output_dir=`grep -P "\-d" ${PCREATE_PY}`
 if [ "${is_pcreate_output_dir}" == "" ]
 then
@@ -52,7 +53,7 @@ fi
 
 #copydir.py
 echo "[INFO] to copydir.py"
-COPYDIR_PY="${VIRTUAL_ENV}/${LIB_PYRAMID}/scaffolds/copydir.py"
+COPYDIR_PY="${LIB_PYRAMID}/scaffolds/copydir.py"
 is_copydir_overwrite=`grep -P "interactive=interactive, overwrite=overwrite" ${COPYDIR_PY}`
 if [ "${is_copydir_overwrite}" == "" ]
 then
