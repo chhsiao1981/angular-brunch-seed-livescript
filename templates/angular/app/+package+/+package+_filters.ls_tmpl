@@ -1,9 +1,8 @@
 # Filters
 
 mod = {}
-mod.{{project_camelcase}}Filter = <[version]> ++ (version) ->
-  (text) ->
-    String(text)replace /\%VERSION\%/mg version
+mod.{{project_camelcase}}Filter = <[]> ++ () ->
+  (params) ->
 
 the_filters = angular.module '{{project}}.filters' <[{{project}}.services]>
 for k, v of mod

@@ -1,6 +1,6 @@
 mod = {}
 
-mod.{{project_camelcase}}Directive = <[]> ++ () ->
+mod.{{project_camelcase}}Directive = <[]> ++ ->
   (scope, elem, attrs) ->
 
     
