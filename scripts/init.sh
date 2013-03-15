@@ -37,7 +37,7 @@ fi
   
 #templates
 echo "to link templates/* ../templates"
-the_basename=`pwd|sed 's/.*\//g'`
+the_basename=`pwd|sed 's/.*\///g'`
 echo "the_basename: ${the_basename}"
 cd ..
 ln -s ${the_basename}/templates ./
