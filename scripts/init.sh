@@ -20,7 +20,7 @@ mv ${filename}.tmp ${filename}
 #PYRAMID
 echo "[INFO] to init pyramid"
 
-is_using_pyramid=`./scripts/check_using_pyramid.pl "${VIRTUAL_ENV}" ${current_dir}`
+is_using_pyramid=`./scripts/check_using_pyramid.pl "${VIRTUAL_ENV}" ${angular_brunch_seed_livescript_current_dir}`
 
 if [ "${is_using_pyramid}" == "false" ]
 then
