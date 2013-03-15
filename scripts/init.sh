@@ -37,8 +37,10 @@ fi
   
 #templates
 echo "to cp -R templates/* ../templates"
-mkdir -p ../templates
-cp -R templates/* ../templates
+the_basename=`pwd|sed 's/.*\//g'`
+cd ..
+ln -s ${the_basename}/templates ./
+cd ${the_basename}
 
 #setup.py
 echo "[INFO] to setup.py"
