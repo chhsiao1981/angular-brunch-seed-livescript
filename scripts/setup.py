@@ -9,9 +9,9 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 requires = [
     ]
 
-setup(name='chhsiao1981_angular-brunch-seed-livescript',
+setup(name='app',
       version='0.0',
-      description='chhsiao1981_angular-brunch-seed-livescript',
+      description='app',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -28,7 +28,7 @@ setup(name='chhsiao1981_angular-brunch-seed-livescript',
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="chhsiao1981_angularbrunchseedlivescript",
+      test_suite="app",
       entry_points="""\
       [pyramid.scaffold]
       angular = templates:AngularProjectTemplate
