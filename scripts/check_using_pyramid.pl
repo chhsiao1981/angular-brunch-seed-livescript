@@ -4,8 +4,8 @@ $virtual_env = $ARGV[0];
 $current_dir = $ARGV[1];
 
 if($current_dir =~ /^${virtual_env}/) {
-  print "true";
+  print "current_dir: ${current_dir} virtual_env: ${virtual_env}: true";
 }
 else {
-  print "false";
+  print "current_dir: ${current_dir} virtual_env: ${virtual_env}: false";
 }
