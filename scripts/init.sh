@@ -43,14 +43,7 @@ cp -R templates/* ../templates
 #setup.py
 echo "[INFO] to setup.py"
 SETUP_PY="../setup.py"
-is_pyramid_scaffold=`grep pyramid.scaffold ${SETUP_PY}`
-if [ "${is_pyramid_scaffold}" == "" ]
-then
-  echo "to do_setup_py.pl"
-  cp ${SETUP_PY} ${SETUP_PY}.orig
-  cat ${SETUP_PY} | /usr/bin/perl scripts/do_setup_py.pl > ${SETUP_PY}.tmp
-  mv ${SETUP_PY}.tmp ${SETUP_PY}
-fi
+cp scripts/setup.py ${SETUP_PY}
 
 cd ..
 python setup.py egg_info
