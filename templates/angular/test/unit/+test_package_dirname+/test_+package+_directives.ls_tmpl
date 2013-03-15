@@ -19,7 +19,7 @@ describe "{{project}}.directives", (not-it) ->
 
   it "should switch on value change", inject ($rootScope, $compile) ->
     element := $compile('<div ng-switch="select">' +
-      '<div ng-switch-when="1">first:{{name}}</div>' +
+      '<div ng-switch-when="1">first:\{\{name\}\}</div>' +
       '<div ng-switch-when="2">second:{{name}}</div>' +
       '<div ng-switch-when="true">true:{{name}}</div>' +
       '</div>') $rootScope
