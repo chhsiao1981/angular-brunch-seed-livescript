@@ -1,6 +1,0 @@
-describe "{{project}}.filters", (not-it) ->
-  beforeEach ->
-    module "{{project}}.filters"
-  
-  it "", ->
-    expect("") .toBe ""

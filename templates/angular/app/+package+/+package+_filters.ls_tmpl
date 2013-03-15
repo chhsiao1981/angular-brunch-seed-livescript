@@ -1,9 +1,0 @@
-# Filters
-
-mod = {}
-mod.{{project_camelcase}}Filter = <[]> ++ ->
-  (params) ->
-
-the_filters = angular.module '{{project}}.filters' <[{{project}}.services]>
-for k, v of mod
-  the_filters .= filter k, v

@@ -1,9 +1,0 @@
-mod = {}
-
-mod.{{project_camelcase}}Directive = <[]> ++ ->
-  (scope, elem, attrs) ->
-
-    
-
-# register the module with Angular
-angular.module '{{project}}.directives' <[{{project}}.services]> .directive mod

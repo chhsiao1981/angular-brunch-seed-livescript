@@ -1,5 +1,0 @@
-mod = {}
-
-mod.{{project_camelcase_uppercase}}Ctrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resource, $rootScope) ->
-
-angular.module '{{project}}.controllers' <[{{project}}.services]> .controller mod

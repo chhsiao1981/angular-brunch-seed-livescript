@@ -1,6 +1,0 @@
-describe "{{project}}.directives", (not-it) ->
-  beforeEach ->
-    module "{{project}}.directives"
-  
-  it "", ->
-    expect("") .toBe ""

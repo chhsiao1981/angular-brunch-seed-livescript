@@ -1,4 +1,0 @@
-90a91,93
->         else:
->             output_dir = os.path.abspath(os.getcwd())
-> 
