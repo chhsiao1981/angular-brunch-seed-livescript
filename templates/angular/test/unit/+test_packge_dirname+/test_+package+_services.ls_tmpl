@@ -1,0 +1,6 @@
+describe "{{project}}.services", (not-it) ->
+  beforeEach ->
+    module "{{project}}.services"
+  
+  it "", ->
+    expect("") .toBe ""

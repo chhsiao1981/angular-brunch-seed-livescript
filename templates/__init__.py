@@ -1,6 +1,7 @@
 from pyramid.scaffolds.template import Template # API
 import logging #logging
 import os
+import re
 
 def underscore_to_camelcase_uppercase(var):
     return ''.join([word.capitalize() for word in var.split('_')])
@@ -30,6 +31,20 @@ class PyramidTemplate(Template):
             # Rename the app logger in the rare case a project is named 'root'
             package_logger = 'app'
         vars['package_logger'] = package_logger
+
+        vars['package_dirname'] = os.path.dirname(vars['package_full_name'])
+
+        vars['test_package_full_name'] = re.sub(r'\/', '/test_', vars['package_full_name'])
+        if vars['test_package_full_name'][0:3] != 'test' and vars['test_package_full_name'][0:4] != '/test':
+            vars['test_package_full_name'] = re.sub(r'^', 'test_', vars['test_package_full_name'])
+
+        vars['test_package_dirname'] = re.sub(r'\/', '/test_', vars['package_dirname'])
+        if vars['test_package_dirname'][0:3] != 'test' and vars['test_package_dirname'][0:4] != '/test':
+            vars['test_package_dirname'] = re.sub(r'^', 'test_', vars['test_package_dirname'])
+        if vars['package_dirname'] == '' or vars['package_dirname'] == '.':
+            vars['test_package_dirname'] = '.'
+
+        vars['package_full_name_dot'] = re.sub(r'\/', '.', vars['package_full_name'])
 
         logging.warning('command: ' + repr(command))
         logging.warning('output_dir: ' + repr(output_dir))

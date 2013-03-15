@@ -1,0 +1,16 @@
+mod = {}
+
+#mod.{{project_camelcase}}Directive = <[]> ++ ->
+#  (scope, elem, attrs) ->
+
+#mod.{{project_camelcase}}Directive = <[]> ++ ->
+#  templateUrl: ''
+#  replace: false
+#  transclude: false,
+#  restrict: 'EACM'
+#  scope: false
+#  link: (scope, elem, attrs) ->
+    
+
+# register the module with Angular
+angular.module '{{project}}.directives' <[{{project}}.services]> .directive mod

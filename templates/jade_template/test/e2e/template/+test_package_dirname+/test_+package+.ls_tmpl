@@ -1,0 +1,8 @@
+describe "{{project}}", (not-it) ->
+  beforeEach ->
+    browser! .navigateTo "/"
+
+  afterEach ->
+  
+  it "", ->
+    expect("") .toBe void

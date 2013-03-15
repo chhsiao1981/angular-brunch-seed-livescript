@@ -3,6 +3,8 @@
 rm -rf node_modules
 npm install
 
+angular_brunch_seed_livescript_current_dir=`pwd`
+
 #jade 
 echo "[INFO] to jade"
 filename=node_modules/jade-brunch/vendor/runtime.js
@@ -18,7 +20,6 @@ mv ${filename}.tmp ${filename}
 #PYRAMID
 echo "[INFO] to init pyramid"
 
-current_dir=`pwd`
 is_using_pyramid=`./scripts/check_using_pyramid.pl "${VIRTUAL_ENV}" ${current_dir}`
 
 if [ "${is_using_pyramid}" == "false" ]
@@ -34,33 +35,6 @@ then
   LIB_PYRAMID="${VIRTUAL_ENV}/lib/python3.3/site-packages/pyramid"
 fi
   
-#pcreate.py
-echo "[INFO] to pcreate.py"
-PCREATE_PY="${LIB_PYRAMID}/scripts/pcreate.py"
-is_pcreate_output_dir=`grep -P "\-d" ${PCREATE_PY}`
-if [ "${is_pcreate_output_dir}" == "" ]
-then
-  echo "to patch pcreate.patch"
-  patch ${PCREATE_PY} < scripts/pcreate.patch
-fi
-
-is_pcreate_output_dir2=`pcregrep -M "else:\s*output_dir = os\.path\.abspath\(os\.getcwd\(\)\)" ${PCREATE_PY}`
-if [ "${is_pcreate_output_dir}" == "" ]
-then
-  echo "to patch pcreate2.patch"
-  patch ${PCREATE_PY} < scripts/pcreate2.patch
-fi
-
-#copydir.py
-echo "[INFO] to copydir.py"
-COPYDIR_PY="${LIB_PYRAMID}/scaffolds/copydir.py"
-is_copydir_overwrite=`grep -P "interactive=interactive, overwrite=overwrite" ${COPYDIR_PY}`
-if [ "${is_copydir_overwrite}" == "" ]
-then
-  echo "to patch copydir.patch"
-  patch ${COPYDIR_PY} < scripts/copydir.patch
-fi
-
 #templates
 echo "to cp -R templates/* ../templates"
 mkdir -p ../templates
@@ -77,3 +51,7 @@ then
   cat ${SETUP_PY} | /usr/bin/perl scripts/do_setup_py.pl > ${SETUP_PY}.tmp
   mv ${SETUP_PY}.tmp ${SETUP_PY}
 fi
+
+cd ..
+python setup.py egg_info
+cd ${angular_brunch_seed_livescript_current_dir}
