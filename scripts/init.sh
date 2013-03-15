@@ -36,17 +36,20 @@ then
 fi
   
 #templates
-echo "to cp -R templates/* ../templates"
+echo "to link templates/* ../templates"
 the_basename=`pwd|sed 's/.*\//g'`
+echo "the_basename: ${the_basename}"
 cd ..
 ln -s ${the_basename}/templates ./
-cd ${the_basename}
+cd ${angular_brunch_seed_livescript_current_dir}
 
 #setup.py
-echo "[INFO] to setup.py"
+echo "[INFO] to setup.py: current_dir:"
+pwd
 SETUP_PY="../setup.py"
 cp scripts/setup.py ${SETUP_PY}
 
 cd ..
+python setup.py develop
 python setup.py egg_info
 cd ${angular_brunch_seed_livescript_current_dir}
