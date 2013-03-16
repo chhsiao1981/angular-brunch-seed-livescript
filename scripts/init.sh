@@ -36,3 +36,4 @@ python setup.py egg_info
 
 
 cd ${angular_brunch_seed_livescript_current_dir}
+source __/bin/activate
