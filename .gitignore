@@ -1,16 +1,13 @@
 **/.DS_Store
-nbproject
-manifest.mf
-build.xml
 
-.project
-.settings
-.idea/*
-app/assets/*html
-app/assets/partials/app/*.html
+/app/assets/*html
+/app/assets/partials/app/*.html
+/_public
+/node_modules/*
 
-_public
-node_modules/*
+#virtualenv
+/__
+
 npm-debug.log
 
 *.swp
