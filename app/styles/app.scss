@@ -12,6 +12,8 @@
 @import "vendor/styles/bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
 @import "vendor/styles/bootstrap/mixins";
 
+@import "themes/custom/variables";
+
 // CSS Reset
 @import "vendor/styles/bootstrap/reset";
 
@@ -63,4 +65,6 @@
 @import "vendor/styles/bootstrap/utilities"; // Has to be last to override when necessary
 
 // Enable Responsive
-//@import "_responsive";
+@import "_responsive";
+
+@import "themes/custom/overrides";

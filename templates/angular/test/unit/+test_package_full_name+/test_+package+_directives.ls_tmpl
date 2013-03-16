@@ -2,6 +2,13 @@ describe "{{project}}.directives", (not-it) ->
   beforeEach ->
     module "{{project}}.directives"
 
+  beforeEach ->
+    module "_public/partials/app/nav.html"
+
+  beforeEach inject <[$injector]> ++ ($injector) ->
+    $http_backend := $injector .get '$httpBackend'
+    $http_backend .when 'GET', '/img/temp.png' .respond ''
+
   it "should be always true", ->
     expect("") .toBe ""
 

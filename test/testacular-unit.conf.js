@@ -62,6 +62,7 @@ urlRoot = '/__testacular/';
 
 // compile coffee scripts
 preprocessors = {
+  '**/*.html': 'html2js',
   '**/*.ls': 'Live'
 };
 
