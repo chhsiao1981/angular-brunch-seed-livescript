@@ -31,9 +31,8 @@ echo "[INFO] to setup.py"
 cp scripts/setup.py __/app
 
 cd __/app
-python setup.py develop
 python setup.py egg_info
-
+python setup.py develop
 
 cd ${angular_brunch_seed_livescript_current_dir}
 source __/bin/activate
