@@ -5,9 +5,6 @@ describe "seed.directives", (not-it) ->
   it "should be always true", ->
     expect("") .toBe ""
 
-  it "should be always false", ->
-    expect("") .toBe "1"
-
   it "should set the style as expected style", inject ($rootScope, $compile) ->
     element = $compile('<div ng-style="{height: \'40px\'}"></div>') $rootScope
     $rootScope .$digest!
