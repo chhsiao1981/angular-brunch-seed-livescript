@@ -1,6 +1,6 @@
-describe "{{project}}.directives", (not-it) ->
+describe "seed.directives", (not-it) ->
   beforeEach ->
-    module "{{project}}.directives"
+    module "seed.directives"
 
   it "should be always true", ->
     expect("") .toBe ""

@@ -6,8 +6,8 @@ files = [
   'vendor/scripts/jquery-1.8.3.js',
   'vendor/scripts/angular/angular.js',
   'vendor/scripts/angular/angular-*.js',
-  '_public/js/app.js',
   'test/vendor/angular/angular-mocks.js',
+  '_public/js/app.js',
   'test/unit/**/test_*.ls'
 ];
 
