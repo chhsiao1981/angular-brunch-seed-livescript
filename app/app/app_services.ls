@@ -1,7 +1,9 @@
 # Services
-mod = {}
-
-mod.version = 
+version = 
   -> "0.1"
 
-angular.module 'app.services' <[]> .factory mod
+mod = {version}
+
+the_services = angular.module 'app.services' <[]>
+for k, v of mod
+  the_services .= factory k, v

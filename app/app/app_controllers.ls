@@ -1,6 +1,4 @@
-mod = {}
-
-mod.AppCtrl = <[$scope $location $resource $rootScope version]> ++ (s, $location, $resource, $rootScope, version) ->
+AppCtrl = <[$scope $location $resource $rootScope version]> ++ (s, $location, $resource, $rootScope, version) ->
   s <<<< {$location, version}
 
   s.$watch '$location.path()' (activeNavId or '/') ->
@@ -8,5 +6,7 @@ mod.AppCtrl = <[$scope $location $resource $rootScope version]> ++ (s, $location
 
   s.getClass = (id) ->
     if (s.activeNavId.substring 0, id.length) is id then 'active' else ''
+
+mod = {AppCtrl}
 
 angular.module 'app.controllers' <[app.services]> .controller mod
