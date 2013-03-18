@@ -8,6 +8,8 @@ files = [
   'vendor/scripts/angular/angular-*.js',
   'test/vendor/angular/angular-mocks.js',
   '_public/js/app.js',
+  '_public/**/*.html',
+  '_public/*.html',
   'test/unit/**/test_*.ls'
 ];
 

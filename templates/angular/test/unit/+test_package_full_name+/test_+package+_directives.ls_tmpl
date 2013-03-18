@@ -1,11 +1,18 @@
 describe "{{project}}.directives", (not-it) ->
+  var $http_backend
+
   beforeEach ->
     module "{{project}}.directives"
 
   beforeEach ->
     module "_public/partials/app/nav.html"
 
-  beforeEach inject <[$injector]> ++ ($injector) ->
+  beforeEach ->
+    module ($provide) ->
+      $provide .value "HTTP_PREFIX", '_public'
+      return
+
+  beforeEach inject ($injector) ->
     $http_backend := $injector .get '$httpBackend'
     $http_backend .when 'GET', '/img/temp.png' .respond ''
 

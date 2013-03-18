@@ -1,6 +1,20 @@
 describe "seed.directives", (not-it) ->
+  var $http_backend
+
   beforeEach ->
     module "seed.directives"
+
+  beforeEach ->
+    module "_public/partials/app/nav.html"
+
+  beforeEach ->
+    module ($provide) ->
+      $provide .value "HTTP_PREFIX", '_public'
+      return
+
+  beforeEach inject ($injector) ->
+    $http_backend := $injector .get '$httpBackend'
+    $http_backend .when 'GET', '/img/temp.png' .respond ''
 
   it "should be always true", ->
     expect("") .toBe ""

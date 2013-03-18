@@ -1,6 +1,7 @@
-mod = {}
+version = <[]> ++ ->
+  "0.1"
 
-mod.version = 
-  -> "0.1"
+mod = {version}
 
-angular.module 'seed.services' <[]> .factory mod
+the_services = angular.module 'seed.services' <[]>
+[the_services .= factory k, v for k, v of mod]
