@@ -1,5 +1,3 @@
-mod = {}
-
 {{project_camelcase_uppercase}}Ctrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resource, $rootScope) ->
 
 mod = { {{project_camelcase_uppercase}}Ctrl }
