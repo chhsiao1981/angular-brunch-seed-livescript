@@ -14,29 +14,32 @@ exports.config =
   files:
     javascripts:
       joinTo:
-        'js/app.js': /^app((?!test).)*$/
-        'js/test.js': /^app.*test.*$/
+        'js/app.js': /^app/
+        'js/test.js': /^test/
         'js/vendor.js': /^vendor/
       order:
         before:
           'vendor/scripts/console-helper.js'
           'vendor/scripts/jquery-1.8.3.js'
-          'vendor/scripts/bootstrap/bootstrap-transition.js'
-          'vendor/scripts/bootstrap/bootstrap-affix.js'
-          'vendor/scripts/bootstrap/bootstrap-alert.js'
-          'vendor/scripts/bootstrap/bootstrap-button.js'
-          'vendor/scripts/bootstrap/bootstrap-carousel.js'
-          'vendor/scripts/bootstrap/bootstrap-collapse.js'
-          'vendor/scripts/bootstrap/bootstrap-dropdown.js'
-          'vendor/scripts/bootstrap/bootstrap-modal.js'
-          'vendor/scripts/bootstrap/bootstrap-scrollspy.js'
-          'vendor/scripts/bootstrap/bootstrap-tab.js'
-          'vendor/scripts/bootstrap/bootstrap-tooltip.js'
-          'vendor/scripts/bootstrap/bootstrap-popover.js'
-          'vendor/scripts/bootstrap/bootstrap-typeahead.js'
+          'vendor/scripts/bootstrap-sass/tooltip.js'
+          'vendor/scripts/bootstrap-sass/transition.js'
+          'vendor/scripts/bootstrap-sass/affix.js'
+          'vendor/scripts/bootstrap-sass/alert.js'
+          'vendor/scripts/bootstrap-sass/button.js'
+          'vendor/scripts/bootstrap-sass/carousel.js'
+          'vendor/scripts/bootstrap-sass/collapse.js'
+          'vendor/scripts/bootstrap-sass/dropdown.js'
+          'vendor/scripts/bootstrap-sass/modal.js'
+          'vendor/scripts/bootstrap-sass/scrollspy.js'
+          'vendor/scripts/bootstrap-sass/tab.js'
           'vendor/scripts/angular/angular.js'
-          'vendor/scripts/angular/angular-resource.js'
-          'vendor/scripts/angular/angular-cookies.js'
+          'vendor/scripts/angular-animate/angular-animate.js'
+          'vendor/scripts/angular-cookies/angular-cookies.js'
+          'vendor/scripts/angular-i18n/angular-i18n.js'
+          'vendor/scripts/angular-loader/angular-loader.js'
+          'vendor/scripts/angular-resource/angular-resource.js'
+          'vendor/scripts/angular-route/angular-route.js'
+          'vendor/scripts/angular-touch/angular-touch.js'
 
     stylesheets:
       joinTo:

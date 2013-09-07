@@ -1,7 +1,0 @@
-describe "{{project}}.controllers", (not-it) ->
-  beforeEach ->
-    module "{{project}}.controllers"
-    
-  it "", ->
-    expect("") .toBe ""
-
