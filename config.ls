@@ -20,7 +20,7 @@ exports.config =
       order:
         before:
           'vendor/scripts/console-helper.js'
-          'vendor/scripts/jquery-1.8.3.js'
+          'vendor/scripts/jquery/jquery.js'
           'vendor/scripts/bootstrap-sass/tooltip.js'
           'vendor/scripts/bootstrap-sass/transition.js'
           'vendor/scripts/bootstrap-sass/affix.js'
