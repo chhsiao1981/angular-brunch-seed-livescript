@@ -2,12 +2,8 @@ describe "seed.directives", (not-it) ->
   var $http_backend
 
   beforeEach ->
-    module "seed.directives"
+    nav_html = window.__html__['_public/partials/app/nav.html']
 
-  beforeEach ->
-    module "_public/partials/app/nav.html"
-
-  beforeEach ->
     module ($provide) ->
       $provide .value "HTTP_PREFIX", '_public'
       return
@@ -20,6 +16,7 @@ describe "seed.directives", (not-it) ->
     expect("") .toBe ""
 
   it "should set the style as expected style", inject ($rootScope, $compile) ->
+
     element = $compile('<div ng-style="{height: \'40px\'}"></div>') $rootScope
     $rootScope .$digest!
     expect (element .css 'height') .toEqual '40px'
@@ -48,3 +45,4 @@ describe "seed.directives", (not-it) ->
     $rootScope.select = true;
     $rootScope .$apply!
     expect (element.text!) .toEqual 'true:misko'
+  '''

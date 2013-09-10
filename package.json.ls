@@ -17,6 +17,8 @@ scripts:
 dependencies: {}
 devDependencies:
   karma: '>=0.8.0'
+  'karma-junit-reporter': '>=0.1.x'
+  'karma-live-preprocessor': '>=0.1.x'
   LiveScript: '>=1.2.0'
   'prelude-ls': '>=1.0.x'
   brunch: '>=1.5.x'

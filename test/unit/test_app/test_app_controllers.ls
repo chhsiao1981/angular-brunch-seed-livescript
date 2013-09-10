@@ -4,4 +4,3 @@ describe "app.controllers", (not-it) ->
     
   it "", ->
     expect("") .toBe ""
-
