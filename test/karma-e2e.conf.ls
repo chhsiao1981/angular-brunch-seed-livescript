@@ -10,8 +10,8 @@ module.exports = (config) ->
       '_public/js/app.js',
       '_public/**/*.html',
       '_public/*.html',
-      'test/e2e/**/test_*.ls'
-      'test/e2e/test_*.ls'
+      'test/e2e/**/*.ls'
+      'test/e2e/*.ls'
     ]
     frameworks: <[ ng-scenario ]>
     exclude: []

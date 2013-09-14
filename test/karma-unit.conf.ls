@@ -7,15 +7,14 @@ module.exports = (config) ->
       'vendor/scripts/angular-*/angular-*.js'
       'test/vendor/angular-mocks/angular-mocks.js'
       '_public/js/app.js'
-      '_public/partials/app/nav.html'
       '_public/**/*.html'
       '_public/*.html'
-      'test/unit/**/test1.js'
-      'test/unit/**/test_*.ls'
+      'test/spec/**/*.js'
+      'test/spec/**/*.ls'
     ]
     frameworks: <[ jasmine ]>
     exclude: []
-    logLevel: config.LOG_DEBUG
+    logLevel: config.LOG_INFO
     reportSlowerThan: 500
     autoWatch: true
     reporters: <[ progress ]>
