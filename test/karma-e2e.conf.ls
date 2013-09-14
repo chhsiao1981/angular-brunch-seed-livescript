@@ -2,14 +2,14 @@ module.exports = (config) ->
   config.set do
     basePath: '../'
     files: [
-      'vendor/scripts/jquery/jquery.js',
-      'vendor/scripts/angular/angular.js',
-      'vendor/scripts/angular-*/angular-*.js',
-      'test/vendor/angular-mocks/angular-mocks.js',
-      'test/vendor/angular-ng-scenario/angular-ng-scenario.js',
-      '_public/js/app.js',
-      '_public/**/*.html',
-      '_public/*.html',
+      'vendor/scripts/jquery/jquery.js'
+      'vendor/scripts/angular/angular.js'
+      'vendor/scripts/angular-*/angular-*.js'
+      'test/vendor/angular-mocks/angular-mocks.js'
+      'test/vendor/angular-ng-scenario/angular-ng-scenario.js'
+      '_public/js/app.js'
+      '_public/**/*.html'
+      '_public/*.html'
       'test/e2e/**/*.ls'
       'test/e2e/*.ls'
     ]
